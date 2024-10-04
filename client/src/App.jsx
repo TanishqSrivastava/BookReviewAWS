@@ -1,22 +1,18 @@
-import React, { useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
-import Book from './components/Book';
-import HomePage from './components/HomePage';
-import Navbar from './components/Navbar';
-import './styles.css';
-
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
+import BookDetail from './BookDetail';
 
-
-export default function App() {
+function App() {
   return (
-    <MainPage />
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/book/:id" element={<BookDetail />} />
+      </Routes>
+    </Router>
   );
 }
 
-;
+export default App;

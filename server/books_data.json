@@ -1,0 +1,56 @@
+[
+    {
+        "id": "EcekAwAAQBAJ",
+        "title": "Fantastic Beasts and where to Find Them",
+        "authors": [
+            "J. K. Rowling"
+        ],
+        "publisher": "Bloomsbury Publishing",
+        "published_date": "2009-01-01",
+        "description": "An entertaining companion to the Harry Potter books, written by J.K. Rowling. Fantastic Beasts and Where to Find Them is an extensive introduction to magical beasts familiar from the Harry Potter books and others we haven't yet met. Includes information about beasts which can be found in Australia and New Zealand and what they eat.",
+        "page_count": 129,
+        "categories": [
+            "Juvenile Fiction"
+        ],
+        "average_rating": "No rating",
+        "ratings_count": "No ratings count",
+        "thumbnail": "http://books.google.com/books/content?id=EcekAwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "small_thumbnail": "http://books.google.com/books/content?id=EcekAwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
+    },
+    {
+        "id": "JHEkAQAAMAAJ",
+        "title": "Harry Potter and the Deathly Hallows",
+        "authors": [
+            "J. K. Rowling"
+        ],
+        "publisher": "Unknown Publisher",
+        "published_date": "2007",
+        "description": "\"The final adventure in J.K. Rowling's phenomenal, best-selling Harry Potter book series\"--Provided by publisher.",
+        "page_count": 870,
+        "categories": [
+            "Juvenile Fiction"
+        ],
+        "average_rating": 5,
+        "ratings_count": 3,
+        "thumbnail": "http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "small_thumbnail": "http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
+    },
+    {
+        "id": "nmXTy4FPfcwC",
+        "title": "Harry Potter and the Chamber of Secrets",
+        "authors": [
+            "J. K. Rowling"
+        ],
+        "publisher": "Raincoast Books",
+        "published_date": "1999",
+        "description": "Witchcraft, wizardry - fiction.",
+        "page_count": 260,
+        "categories": [
+            "Juvenile Fiction"
+        ],
+        "average_rating": 5,
+        "ratings_count": 1,
+        "thumbnail": "http://books.google.com/books/content?id=nmXTy4FPfcwC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+        "small_thumbnail": "http://books.google.com/books/content?id=nmXTy4FPfcwC&printsec=frontcover&img=1&zoom=5&source=gbs_api"
+    }
+]
