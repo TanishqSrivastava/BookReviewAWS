@@ -65,17 +65,21 @@ export default function BookDetail() {
           </p>
           <p className="text-lg mt-2">Published: {book.publishedDate || 'Unknown'}</p>
           <p className="text-base mt-6">{book.description || 'No description available.'}</p>
+          <p className="text-base mt-6">Page Count: {book.page_count || 'No description available.'}</p>
+          <p className="text-base mt-6">Average Rating: {book.average_rating || 'No average rating.'}</p>
+          <p className="text-base mt-6">Ratings Count: {book.ratings_count || 'No ratings count.'}</p>
+          <p className="text-base mt-6">Categories: {book.categories || 'No categories.'}</p>
 
           
           <div className="flex justify-between mt-10">
-            <button className="px-4 py-2 bg-gray-500 text-white rounded">Left Button</button>
+            <button className="px-4 py-2 bg-gray-500 text-white rounded">Like</button>
             <button
               className="px-4 py-2 bg-blue-500 text-white rounded"
               onClick={() => setShowReviewPopup(true)}
             >
               Write a Review
             </button>
-            <button className="px-4 py-2 bg-gray-500 text-white rounded">Right Button</button>
+            <button className="px-4 py-2 bg-gray-500 text-white rounded">Add to Watchlist</button>
           </div>
         </div>
       </div>

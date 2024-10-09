@@ -1,22 +1,23 @@
-// src/components/HomePage.js
+// src/components/HomePage.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     console.log('Search Query:', searchQuery);
-    
+
+    navigate('/home', { state: { query: searchQuery } });
   };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      
       <h1 className="text-5xl font-bold mb-8 text-gray-800">Book Review Site</h1>
 
-      
       <form onSubmit={handleSubmit} className="flex">
         <input
           type="text"
