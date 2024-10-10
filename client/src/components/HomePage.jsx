@@ -8,17 +8,13 @@ const HomePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log('Search Query:', searchQuery);
-
     navigate('/home', { state: { query: searchQuery } });
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
       <h1 className="text-5xl font-bold mb-8 text-gray-800">Book Review Site</h1>
-
-      <form onSubmit={handleSubmit} className="flex">
+      <form onSubmit={handleSubmit} className="flex mb-6">
         <input
           type="text"
           value={searchQuery}
@@ -28,7 +24,7 @@ const HomePage = () => {
         />
         <button
           type="submit"
-          className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-r-md hover:bg-blue-900 transition-colors"
+          className="px-6 py-2 bg-blue-500 text-white font-semibold rounded-r-md hover:bg-blue-700 transition-colors"
         >
           Search
         </button>

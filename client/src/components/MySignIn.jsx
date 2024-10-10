@@ -1,43 +1,19 @@
-// src/components/Login.jsx
-import React, { useState, useContext } from 'react';
-import { signIn } from '../Auth';
-import { useNavigate, Link } from 'react-router-dom';
-import { AuthContext } from '../AuthContext';
+// src/components/MySignIn.jsx
+import React from 'react';
+import { useAuthenticator } from '@aws-amplify/ui-react';
 
-const Login = () => {
-  const { setUser } = useContext(AuthContext);
-  const navigate = useNavigate();
-  const [formState, setFormState] = useState({
-    email: '',
-    password: '',
-  });
-  const [error, setError] = useState('');
+const MySignIn = () => {
+  const { signIn } = useAuthenticator((context) => [context.signIn]);
 
-  const handleChange = (e) => {
-    setFormState((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
-
-    const { email, password } = formState;
-
-    try {
-      const result = await signIn(email, password);
-      setUser(result);
-      navigate('/home');
-    } catch (err) {
-      console.error('Error signing in:', err);
-      setError(err.message || 'Error signing in');
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const { username, password } = event.target.elements;
+    signIn(username.value, password.value);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <form onSubmit={handleSubmit}>
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
         {error && (
@@ -97,7 +73,8 @@ const Login = () => {
         </p>
       </div>
     </div>
+    </form>
   );
 };
 
-export default Login;
+export default MySignIn;
